@@ -1,0 +1,267 @@
+/*
+Theme Name: pyfal
+Theme URI: http://bekti.net
+Author: Rahmat Subekti
+Author URI: http://bekti.net
+Description: Just Simple template created using Material Design Lite Components (http://getmdl.io) and TwentyFifteen for reference
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, custom-header, custom-menu, editor-style, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments
+Text Domain: pyfal
+*/
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+.site-branding p, .post-thumbnail + .entry-content p{
+    margin: 0;
+}
+
+.site-logo img {
+    width: 200px;
+}
+  .navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 500px;
+    -webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .navigation.mdl-navigation{
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 800px;
+  }
+  
+    .search-box {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .search-box.is-focused ~ .navigation-container {
+    opacity: 0;
+    width: 100px;
+  }
+  
+  .site-content {
+    max-width: 1120px;
+}
+    /* comment form and list styling */
+.comment-respond{
+    width: 100%;
+    float: left;
+}
+.form-textfield {
+    width: calc(100% - 67px);
+    float: left;
+    margin-left: 0;
+}
+p.form-submit {
+    width: 50px;
+    float: right;
+    margin: 30px 0;
+    text-align: center;
+}
+.form-submit button[name=submit] {
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+.comment-respond + .comments-area {
+    width: 100%;
+    top: -20px;
+    position: relative;
+}
+
+.comment-list .comment {
+    width: 100%;
+    float: left;
+}
+
+.comment-body + .comment {
+    width: calc(100% - 25px);
+    float: right;
+}
+.comment-body + .comment .comment-body {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+}
+.comment-list .comment-body {
+    border-bottom: 2px solid rgba(104, 79, 177, 0.47);
+}
+.comment-meta .vcard img {
+    float: left;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    margin-right: 16px;
+}
+
+.comment-content {
+    width: 100%;
+    float: left;
+    padding: 10px 0;
+}
+
+.comment-meta .vcard .fn {
+margin-top: 4px;display: inline-block;}
+
+.comment-meta {
+    width: 100%;
+    float: left;
+}
+
+.comment-content p {
+    margin: 0;
+}
+
+.vcard .says {
+    display: none;
+}
+    /* article styling */
+.content-area article + article {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.content-area article{
+    padding : 13px 0;
+    width: 100%;
+    float: left;
+}
+.post-thumbnail {
+    width: 200px;
+    height: 120px;
+    float: left;
+}
+.post-thumbnail + .entry-content {
+    float: right;
+    width: calc(100% - 220px);
+}
+.entry-title {
+    margin: 0;
+    padding-bottom: 4px;
+    font-size: 25px;
+}
+
+.entry-header {
+    padding-bottom: 4px;
+}
+.single .entry-header{
+    padding: 0;
+}
+
+.entry-header small + small,.entry-header ~ small + small{
+    padding-left: 12px;
+}
+small + .entry-content {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    margin: 5px 0;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+}
+small + .entry-content p{
+    font-size: 16px;
+}
+.aligncenter {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.entry-content a:hover, .entry-content a:focus, .comment-body > a:hover, .pingback .comment-body > a:focus {
+    border-bottom: 0;
+}
+small + .entry-content a, .comment-body > a {
+    border-bottom: 1px solid #333;
+}
+.social-sharer a {
+    color: #fff;
+    font-size: 12px;
+    line-height: 25px;
+    height: 22px;
+    margin: 3px;
+    border-bottom: none !important;
+    min-width: 30px;
+}
+
+.related-item {
+    max-width: 170px;
+    padding: 5px;
+    float: left
+}
+
+.related-item .post-thumbnail {
+    width: 170px;
+    height: 100px;
+}
+.nav-links a[rel=prev]{
+    float:left;
+}
+
+.nav-links a[rel=next]{
+    float:right;
+}
+
+/**
+ * Secondary
+ */
+.secondary aside ul {
+    margin: 0;
+    padding: 0 0 0 22px;
+}
+
+h2.widget-title {
+    margin: 0;
+    padding: 10px 0;
+}
+.widget-area .widget {
+    border-top: 3px solid rgb(187, 187, 187);
+    padding-bottom: 20px;
+}
+
+/**
+ * Pagination
+ */
+.pagination a.prev {
+    float: left;
+    padding: 0;
+}
+
+.pagination a.next {
+    float: right;
+    padding: 0;
+}
+
+.pagination.loop-pagination {
+    text-align: center;
+}
+
+.pagination .page-numbers {
+    padding: 7px;
+    position: relative;
+    display: inline-block;
+}
+
+/**
+ * Desktop Small 955px
+ */
+
+@media screen and (min-width: 59.6875em) {
+    .secondary .widget-area {
+    max-width: 320px;
+    margin:0 auto;
+}
+}
